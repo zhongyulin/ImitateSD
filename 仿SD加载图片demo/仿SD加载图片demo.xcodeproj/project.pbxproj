@@ -13,6 +13,7 @@
 		E381E3CC1DBCDC8E00AB96B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381E3CA1DBCDC8E00AB96B6 /* Main.storyboard */; };
 		E381E3CE1DBCDC8E00AB96B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E381E3CD1DBCDC8E00AB96B6 /* Assets.xcassets */; };
 		E381E3D11DBCDC8E00AB96B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E381E3CF1DBCDC8E00AB96B6 /* LaunchScreen.storyboard */; };
+		E381E3DB1DBCDF3F00AB96B6 /* DownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E381E3DA1DBCDF3F00AB96B6 /* DownloaderOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		E381E3CD1DBCDC8E00AB96B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E381E3D01DBCDC8E00AB96B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E381E3D21DBCDC8E00AB96B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E381E3D91DBCDF3F00AB96B6 /* DownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderOperation.h; sourceTree = "<group>"; };
+		E381E3DA1DBCDF3F00AB96B6 /* DownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		E381E3C01DBCDC8E00AB96B6 /* 仿SD加载图片demo */ = {
 			isa = PBXGroup;
 			children = (
+				E381E3D81DBCDECA00AB96B6 /* ImitateSD */,
 				E381E3C41DBCDC8E00AB96B6 /* AppDelegate.h */,
 				E381E3C51DBCDC8E00AB96B6 /* AppDelegate.m */,
 				E381E3C71DBCDC8E00AB96B6 /* ViewController.h */,
@@ -77,6 +81,15 @@
 				E381E3C21DBCDC8E00AB96B6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E381E3D81DBCDECA00AB96B6 /* ImitateSD */ = {
+			isa = PBXGroup;
+			children = (
+				E381E3D91DBCDF3F00AB96B6 /* DownloaderOperation.h */,
+				E381E3DA1DBCDF3F00AB96B6 /* DownloaderOperation.m */,
+			);
+			path = ImitateSD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E381E3DB1DBCDF3F00AB96B6 /* DownloaderOperation.m in Sources */,
 				E381E3C91DBCDC8E00AB96B6 /* ViewController.m in Sources */,
 				E381E3C61DBCDC8E00AB96B6 /* AppDelegate.m in Sources */,
 				E381E3C31DBCDC8E00AB96B6 /* main.m in Sources */,
@@ -307,6 +321,7 @@
 				E381E3D71DBCDC8E00AB96B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
