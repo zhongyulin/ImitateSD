@@ -10,7 +10,8 @@
 #import <UIKit/UIKit.h>
 @interface DownloaderOperation : NSOperation
 
-//图片下载地址
-@property (copy, nonatomic) NSString *URLstr;
+
+
++ (instancetype)downloadWithURLstr:(NSString *)URLstr successBlock:(void (^)(UIImage *))successBlock;
 
 @end
