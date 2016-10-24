@@ -22,8 +22,10 @@
 //重写main方法,目的在这个方法做你想做的事情,默认是在子线程异步执行
 - (void)main
 {
+    NSLog(@"传入 %@",self.URLstr);
     
-    NSLog(@"%@",[NSThread currentThread]);
+    //延迟
+    [NSThread sleepForTimeInterval:1.25];
     
     //图片下载
     NSURL *URL = [NSURL URLWithString:self.URLstr];
@@ -32,17 +34,27 @@
     
     UIImage *image = [UIImage imageWithData:data];
     
-    //图片下载完成后回调
-    if (self.successBlock != nil) {
+    if (self.isCancelled == YES) {
         
+        NSLog(@"取消 %@",self.URLstr);
+        
+        return;
+    }
+    
+    //断言检查
+    NSAssert(self.successBlock != nil, @"图片下载完成后,回调不能为空!");
+    
+    //图片下载完成后回调
+//    if (self.successBlock != nil) {
+    
         //返回主线程刷新
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             
             self.successBlock(image);
+            
+            NSLog(@"完成 %@",self.URLstr);
         }];
-    }
-    
-    NSLog(@"%@",image);
+//    }
     
 }
 
